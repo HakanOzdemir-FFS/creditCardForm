@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <article class="center">
+      <div id="credit-card-container" class="credit-card-container">
+        <div class="credit-card-front">
+          <div class="credit-card-chip"></div>
+          <div class="your-bank">Your Bank</div>
+          <div id="creditCardNumber" class="credit-card-number">
+            ################
+          </div>
+          <div class="credit-card-author-container">
+            <div>
+              <span
+                id="credit-card-author-label"
+                class="credit-card-author-label"
+                >Card Holder Name</span
+              >
+              <span id="creditCardAuthor" class="author-span"></span>
+            </div>
+          </div>
+
+          <div class="credit-card-expiry-date">
+            <span id="validThru" class="valid-thru">VALID <br> THRU</span>
+            <span id="creditCardDate" class="span-date"></span>
+          </div>
+          <div id="creditCardSystem" class="credit-card-system"></div>
+        </div>
+
+        <div class="credit-card-back">
+          <div class="line-1"></div>
+          <div class="line-2">
+            <span id="securtyNumber"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="card-number-container">
+          <span>Card Number</span>
+          <input
+            id="inputNumber"
+            class="long-input"
+            type="number"
+            placeholder="Card Number"
+            max="16"
+          />
+        </div>
+        <div class="card-author-container">
+          <span>Name On The Card</span>
+          <input
+            id="inputAuthor"
+            class="long-input"
+            type="text"
+            placeholder="Name Surname"
+          />
+        </div>
+        <div class="card-two-security">
+          <div class="card-expiry-date-container">
+            <span>Expiry Date</span>
+            <input
+              id="inputDate"
+              class="short-input"
+              type="text"
+              placeholder="Month/Year"
+              maxlength="5"
+            />
+          </div>
+          <div class="card-securiy-number-container">
+            <span>Security Number</span>
+            <input
+              id="inputSecurty"
+              class="short-input"
+              type="text"
+              placeholder="CVC/CVV"
+              maxlength="3"
+            />
+          </div>
+        </div>
+      </div>
+      <button class="submit-button">SUBMIT</button>
+    </article>
+  </body>
+</html>

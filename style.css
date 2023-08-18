@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: whitesmoke;
+}
+
+.center {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+  background-color: white;
+  width: 50rem;
+  height: 60rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.input-container {
+  width: 70%;
+  height: 55%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+  color: #333;
+  font-size: 1.5rem;
+  padding: 4rem 5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  border-radius: 5rem;
+  box-shadow: 0 0 0.5rem #333;
+}
+
+.card-number-container,
+.card-author-container,
+.card-expiry-date-container,
+.card-securiy-number-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  transition: 1s;
+}
+span {
+  padding-left: 1rem;
+}
+
+.card-two-security {
+  display: flex;
+  column-gap: 2rem;
+  white-space: nowrap;
+  
+}
+
+.short-input {
+  width: 11.5rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border: 1px solid #333;
+  padding-left: 1rem;
+}
+
+.long-input {
+  border: 1px solid #333;
+  height: 4rem;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  appearance: none;
+  margin: 0;
+}
+
+.submit-button {
+  background: linear-gradient(to left, #ff006e, #8338ec);
+  width: 80%;
+  height: 5rem;
+  border: 0;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 3%;
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 0 0.5rem #333;
+  cursor: pointer;
+}
+
+.credit-card-container {
+  background: linear-gradient(to left, #ff006e, #8338ec);
+  width: 80%;
+  height: 40%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 10%;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem #333;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s; 
+}
+
+.your-bank {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 8%;
+  left: 5%;
+}
+
+.credit-card-chip {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-image: url(svg/chip-1.png);
+  background-size: cover;
+  position: absolute;
+  left: 10%;
+  bottom: 40%;
+}
+
+.credit-card-number {
+  position: absolute;
+  left: 10%;
+  bottom: 25%;
+  font-size: 2rem;
+  color: white;
+}
+
+.credit-card-author-container {
+  position: absolute;
+  left: 12%;
+  bottom: 7%;
+  font-size: 1.3rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  transition: 1s;
+  height: 4rem;
+  width: 20rem;
+}
+
+.credit-card-author-label {
+  position: absolute;
+  white-space: nowrap;
+  top: 40%;
+  left: -5%;
+  transition: top .3s;
+}
+.credit-card-author-label.active{
+  top: 0%;
+}
+
+.author-span {
+  color: white;
+  font-size: 1.7rem;
+  align-self: flex-start;
+  padding-left: 0;
+  position: absolute;
+  top: 40%;
+}
+
+/*For chrome, Safari, Edge, Opera : No apperance number*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.credit-card-expiry-date {
+  position: absolute;
+  right: 20%;
+  bottom: 9%;
+  font-size: 1rem;
+  color: white;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  color: #333;
+  width: 10rem;
+  height: 3rem;
+}
+
+.valid-thru{
+  position: absolute;
+  top: 10%;
+  right:  0;
+  transition: right 0.3s;
+}
+.valid-thru.active{
+  right: 55%;
+}
+
+
+.span-date {
+  color: white;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 15%;
+  right:  0;
+}
+
+.credit-card-system {
+  width: 9rem;
+  height: 6rem;
+  position: absolute;
+  transform: translate(-50%, -500);
+  right: 5%;
+  top: 8%;
+  /* background-image: url(svg/mastercard-2.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .2s;
+}
+
+
+.credit-card-front, .credit-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.credit-card-back {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #ff006e, #8338ec);
+  transform: rotateY(180deg);
+  position: relative;
+  border-radius: 2rem;
+}
+
+.credit-card-container:hover,
+.credit-card-container.active {
+  transform: translate(-50%, -50%) rotateY(180deg); 
+}
+
+.line-1{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background:linear-gradient(to right, #ffafcc, #a2d2ff);
+}
+.line-2{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 70%;
+  height: 15%;
+  background-color: #faedcd;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+}
+
